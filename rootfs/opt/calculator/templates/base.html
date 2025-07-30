@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator & Converter</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/themes.css">
+  <script src="/static/js/navigation.js"></script>
+  <script src="/static/js/touch.js"></script>
+</head>
+<body>
+  <header>
+    <button id="calculator-btn" class="header-btn">Calculator</button>
+    <h1>Calculator & Converter</h1>
+  </header>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><button class="sidebar-btn" data-converter="calculator"><img src="/static/icons/calculator.svg" alt="Calculator"/> Calculator</button></li>
+        <li><button class="sidebar-btn" data-converter="weight"><img src="/static/icons/weight.svg" alt="Weight"/> Weight</button></li>
+        <li><button class="sidebar-btn" data-converter="liquid"><img src="/static/icons/liquid.svg" alt="Liquid"/> Liquid</button></li>
+        <li><button class="sidebar-btn" data-converter="distance"><img src="/static/icons/distance.svg" alt="Distance"/> Distance</button></li>
+        <li><button class="sidebar-btn" data-converter="temperature"><img src="/static/icons/temperature.svg" alt="Temperature"/> Temperature</button></li>
+        <li><button class="sidebar-btn" data-converter="area"><img src="/static/icons/area.svg" alt="Area"/> Area</button></li>
+        <li><button class="sidebar-btn" data-converter="speed"><img src="/static/icons/speed.svg" alt="Speed"/> Speed</button></li>
+        <li><button class="sidebar-btn" data-converter="cooking"><img src="/static/icons/cooking.svg" alt="Cooking"/> Cooking</button></li>
+      </ul>
+    </nav>
+    <main id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+  <script src="/static/js/calculator.js"></script>
+  <script src="/static/js/converter.js"></script>
+</body>
+</html>

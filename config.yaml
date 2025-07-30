@@ -1,0 +1,24 @@
+name: Calculator & Converter
+version: 1.0.0
+description: Advanced calculator and unit converter Home Assistant addon with memory, history, and 8 converter types.
+ingress: true
+ingress_port: 8099
+panel_icon: mdi:calculator
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+options:
+  theme: auto
+  decimal_precision: 2
+  default_service: calculator
+  show_history: true
+  memory_slots: 10
+schema:
+  theme: list(light|dark|auto)
+  decimal_precision: int(1,8)
+  default_service: str
+  show_history: bool
+  memory_slots: int(5,50)

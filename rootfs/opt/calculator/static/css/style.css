@@ -1,0 +1,101 @@
+/* Responsive, touch-optimized styles based on main.css */
+:root {
+  --primary-bg: #222;
+  --secondary-bg: #333;
+  --accent: #4caf50;
+  --text: #fff;
+  --button-bg: #444;
+  --button-hover: #4caf50;
+  --button-active: #388e3c;
+  --sidebar-width: 220px;
+  --header-height: 80px;
+  --content-padding: 32px;
+  --font-size: 2rem;
+}
+body {
+  margin: 0;
+  background: var(--primary-bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-width: 320px;
+  min-height: 480px;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+header {
+  height: var(--header-height);
+  background: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--content-padding);
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.header-btn {
+  font-size: var(--font-size);
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  margin-right: 32px;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 120px;
+  transition: background 0.2s;
+}
+.header-btn:hover {
+  background: var(--button-hover);
+}
+.header-btn:active {
+  background: var(--button-active);
+}
+.container {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: 1fr;
+  height: calc(100vh - var(--header-height));
+}
+.sidebar {
+  background: var(--secondary-bg);
+  padding: var(--content-padding) 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-btn {
+  display: block;
+  width: 90%;
+  margin: 16px auto;
+  font-size: var(--font-size);
+  background: var(--button-bg);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.2s;
+}
+.sidebar-btn:hover {
+  background: var(--button-hover);
+}
+.sidebar-btn:active {
+  background: var(--button-active);
+}
+#main-content {
+  background: var(--primary-bg);
+  padding: var(--content-padding);
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+button.touch-active {
+  filter: brightness(1.3) drop-shadow(0 0 8px var(--accent));
+  outline: 2px solid var(--accent);
+}
